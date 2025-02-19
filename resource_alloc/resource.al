@@ -9,14 +9,14 @@
    :HRLevel :BigInteger
    :ResourceType :String
    :Organization :String
-   :HourlyRate :BigInteger
+   :HourlyRate {:type :BigInteger :optional true}
    :AverageWeeklyHours :BigInteger
-   :CalculatedAnnualRate :BigInteger
+   :CalculatedAnnualRate {:type :BigInteger :optional true}
    :ManagerName :String
    :OrgTree :String
    :Status :String
    :StartDate :String
-   :EndDate :String
+   :EndDate {:type :String :optional true}
    :WorkLocation :String
    :LocationCategory :String
    :Email {:type :Email :guid true}
