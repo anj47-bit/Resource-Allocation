@@ -1,4 +1,4 @@
-(component :Resource)
+(component :Resource.Core)
 
 (entity :Employee
   {:FirstName :String
@@ -25,6 +25,6 @@
 {:Agentlang.Core/Agent
  {:Name :resource-agent
   :Type :planner
-  :Tools [:Resource/Employee]
-  :Input :Resource/InvokeAgent}}
+  :Tools [:Resource.Core/Employee]
+  :Input :Resource.Core/InvokeAgent}}
 

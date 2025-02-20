@@ -1,0 +1,50 @@
+{:objects {:Query {:fields {}}, :Mutation {:fields {}}},
+ :scalars
+ {:AnyScalar
+  {:parse
+   #object[agentlang.graphql.generator$fn__41586 0x2a056ee6 "agentlang.graphql.generator$fn__41586@2a056ee6"],
+   :serialize
+   #object[clojure.core$str 0x1ec5c8df "clojure.core$str@1ec5c8df"]}},
+ :input-objects
+ {:StringComparison
+  {:fields
+   {:contains {:type :String},
+    :eq {:type :String},
+    :gte {:type :String},
+    :startsWith {:type :String},
+    :gt {:type :String},
+    :endsWith {:type :String},
+    :lte {:type :String},
+    :ne {:type :String},
+    :lt {:type :String},
+    :in {:type (list :String)}}},
+  :IntComparison
+  {:fields
+   {:eq {:type :Int},
+    :ne {:type :Int},
+    :gt {:type :Int},
+    :gte {:type :Int},
+    :lt {:type :Int},
+    :lte {:type :Int},
+    :in {:type (list :Int)},
+    :between {:type (list :Int)}}},
+  :FloatComparison
+  {:fields
+   {:eq {:type :Float},
+    :ne {:type :Float},
+    :gt {:type :Float},
+    :gte {:type :Float},
+    :lt {:type :Float},
+    :lte {:type :Float},
+    :in {:type (list :Float)},
+    :between {:type (list :Float)}}},
+  :BooleanComparison
+  {:fields {:eq {:type :Boolean}, :ne {:type :Boolean}}},
+  :ListComparison
+  {:fields
+   {:contains {:type :AnyScalar},
+    :containsAll {:type (list :AnyScalar)},
+    :containsAny {:type (list :AnyScalar)},
+    :eq {:type (list :AnyScalar)},
+    :ne {:type (list :AnyScalar)},
+    :isEmpty {:type :Boolean}}}}}
