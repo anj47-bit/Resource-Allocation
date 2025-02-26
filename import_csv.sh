@@ -4,7 +4,7 @@
 API_URL="http://localhost:8080/api/Resource/Employee"
 
 # CSV file path
-CSV_FILE="/Users/aj-47/Downloads/Resource_1.csv"
+CSV_FILE="/Users/aj-47/Dev/Resource_1.csv"
 
 # Read the CSV file and process each line (skipping header)
 tail -n +2 "$CSV_FILE" | while IFS=',' read -r first_name last_name preferred_name team role hr_level resource_type organization hourly_rate avg_weekly_hours calculated_annual_rate manager_name org_tree status start_date end_date work_location location_category email team_2
