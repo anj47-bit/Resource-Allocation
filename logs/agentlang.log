@@ -1,0 +1,217 @@
+20:49:05.195 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+20:49:05.225 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+20:49:05.225 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+20:49:05.225 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+20:49:05.406 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+20:49:05.483 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+20:49:05.849 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:49:06.341 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+20:49:06.751 DEBUG agentlang.util - AGENT_CONFIG = nil
+20:49:06.753 INFO  agentlang.lang.tools.build - loading model 
+20:49:06.758 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:49:06.762 INFO  agentlang.lang.tools.loader - Component root path: .
+20:49:06.762 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+20:49:06.800 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+20:49:06.814 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+20:49:06.936 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+20:49:06.995 INFO  agentlang.core - Server config - {:port :8080, :authentication nil}
+20:49:07.055 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+20:49:07.788 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:50:06.095 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+20:50:06.126 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+20:50:06.126 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+20:50:06.126 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+20:50:06.308 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+20:50:06.383 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+20:50:06.752 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:50:07.278 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+20:50:07.683 DEBUG agentlang.util - AGENT_CONFIG = nil
+20:50:07.684 INFO  agentlang.lang.tools.build - loading model 
+20:50:07.685 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:50:07.689 INFO  agentlang.lang.tools.loader - Component root path: .
+20:50:07.689 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+20:50:07.729 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+20:50:07.744 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+20:50:07.865 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+20:50:07.911 INFO  agentlang.core - Server config - {:port :8080, :authentication nil}
+20:50:07.978 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+20:50:08.715 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:51:28.048 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+20:51:28.079 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+20:51:28.079 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+20:51:28.079 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+20:51:28.261 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+20:51:28.336 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+20:51:28.709 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:51:29.213 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+20:51:29.624 DEBUG agentlang.util - AGENT_CONFIG = nil
+20:51:29.626 INFO  agentlang.lang.tools.build - loading model 
+20:51:29.627 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:51:29.631 INFO  agentlang.lang.tools.loader - Component root path: .
+20:51:29.631 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+20:51:29.673 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+20:51:29.688 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+20:51:29.817 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+20:51:29.866 INFO  agentlang.core - Server config - {:port :8080, :authentication nil}
+20:51:29.923 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+20:51:30.653 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:56:14.890 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+20:56:14.933 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+20:56:14.949 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+20:56:14.949 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+20:56:15.271 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+20:56:15.349 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+20:56:15.808 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:56:16.319 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+20:56:16.755 DEBUG agentlang.util - AGENT_CONFIG = nil
+20:56:16.756 INFO  agentlang.lang.tools.build - loading model 
+20:56:16.757 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:56:16.761 INFO  agentlang.lang.tools.loader - Component root path: .
+20:56:16.761 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+20:56:16.799 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+20:56:16.818 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+20:56:16.943 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+20:56:16.995 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+20:56:17.057 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+20:56:17.787 INFO  agentlang.lang - registering model Resource, 0.0.1
+20:56:43.773 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 204768849319958, :params {:* "Resource.Core/Employee"}, :route-params {:* "Resource.Core/Employee"}, :headers {"accept" "*/*", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 0, :compojure/route [:get "/api/*"], :websocket? false, :content-type nil, :character-encoding "utf8", :uri "/api/Resource.Core/Employee", :server-name "localhost", :query-string nil, :scheme :http, :request-method :get}
+20:58:49.546 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 204894630850291, :params {:* "Resource/Employee"}, :route-params {:* "Resource/Employee"}, :headers {"accept" "*/*", "content-length" "647", "content-type" "application/json", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 647, :compojure/route [:post "/api/*"], :websocket? false, :content-type "application/json", :character-encoding "utf8", :uri "/api/Resource/Employee", :server-name "localhost", :query-string nil, :scheme :http, :request-method :post}
+20:59:11.404 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 204916492607000, :params {:* "Resource.Core/Employee"}, :route-params {:* "Resource.Core/Employee"}, :headers {"accept" "*/*", "content-length" "652", "content-type" "application/json", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 652, :compojure/route [:post "/api/*"], :websocket? false, :content-type "application/json", :character-encoding "utf8", :uri "/api/Resource.Core/Employee", :server-name "localhost", :query-string nil, :scheme :http, :request-method :post}
+21:00:19.174 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:00:19.207 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:00:19.207 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:00:19.207 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:00:19.411 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:00:19.489 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:00:19.857 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:00:20.367 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:00:20.785 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:00:20.786 INFO  agentlang.lang.tools.build - loading model 
+21:00:20.787 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:00:20.791 INFO  agentlang.lang.tools.loader - Component root path: .
+21:00:20.791 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:00:20.831 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:00:20.845 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:00:20.970 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:00:21.017 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:00:21.085 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:00:21.818 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:02:26.292 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:02:26.325 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:02:26.325 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:02:26.325 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:02:26.508 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:02:26.591 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:02:26.982 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:02:27.498 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:02:27.907 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:02:27.908 INFO  agentlang.lang.tools.build - loading model 
+21:02:27.909 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:02:27.913 INFO  agentlang.lang.tools.loader - Component root path: .
+21:02:27.913 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:02:27.955 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:02:27.969 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:02:28.087 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:02:28.146 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:02:28.206 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:02:28.939 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:04:32.037 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:04:32.067 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:04:32.068 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:04:32.068 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:04:32.241 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:04:32.328 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:04:32.710 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:04:33.272 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:04:33.703 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:04:33.705 INFO  agentlang.lang.tools.build - loading model 
+21:04:33.706 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:04:33.710 INFO  agentlang.lang.tools.loader - Component root path: .
+21:04:33.710 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:04:33.743 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:04:33.758 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:04:33.882 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:04:33.883 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:04:33.953 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:04:34.726 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:05:05.839 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:05:05.872 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:05:05.873 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:05:05.873 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:05:06.072 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:05:06.157 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:05:06.537 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:05:07.084 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:05:07.533 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:05:07.534 INFO  agentlang.lang.tools.build - loading model 
+21:05:07.535 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:05:07.540 INFO  agentlang.lang.tools.loader - Component root path: .
+21:05:07.540 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:05:07.578 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:05:07.596 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:05:07.729 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:05:07.730 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:05:07.804 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:05:08.558 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:06:47.891 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:06:47.921 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:06:47.922 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:06:47.922 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:06:48.102 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:06:48.178 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:06:48.535 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:06:49.050 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:06:49.464 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:06:49.465 INFO  agentlang.lang.tools.build - loading model 
+21:06:49.466 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:06:49.470 INFO  agentlang.lang.tools.loader - Component root path: .
+21:06:49.470 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:06:49.501 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:06:49.516 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:06:51.900 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:06:51.902 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:06:51.968 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:06:52.494 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:08:12.094 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 205457173947666, :params {:* "Resource.Core/Employee"}, :route-params {:* "Resource.Core/Employee"}, :headers {"accept" "*/*", "content-length" "652", "content-type" "application/json", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 652, :compojure/route [:post "/api/*"], :websocket? false, :content-type "application/json", :character-encoding "utf8", :uri "/api/Resource.Core/Employee", :server-name "localhost", :query-string nil, :scheme :http, :request-method :post}
+21:09:52.521 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:09:52.554 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:09:52.554 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:09:52.554 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:09:52.754 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:09:52.844 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:09:53.388 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:09:53.937 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:09:54.381 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:09:54.382 INFO  agentlang.lang.tools.build - loading model 
+21:09:54.384 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:09:54.388 INFO  agentlang.lang.tools.loader - Component root path: .
+21:09:54.388 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:09:54.429 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:09:54.451 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:09:54.573 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:09:54.673 INFO  agentlang.component - auto-creating component - :Resource
+21:09:54.675 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:09:54.713 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:09:55.414 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:10:29.748 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 205594840585000, :params {:* "Resource/InvokeAgent"}, :route-params {:* "Resource/InvokeAgent"}, :headers {"accept" "*/*", "content-length" "700", "content-type" "application/json", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 700, :compojure/route [:post "/api/*"], :websocket? false, :content-type "application/json", :character-encoding "utf8", :uri "/api/Resource/InvokeAgent", :server-name "localhost", :query-string nil, :scheme :http, :request-method :post}
+21:10:51.548 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 205616645224708, :params {:* "Resource.Core/InvokeAgent"}, :route-params {:* "Resource.Core/InvokeAgent"}, :headers {"accept" "*/*", "content-length" "705", "content-type" "application/json", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 705, :compojure/route [:post "/api/*"], :websocket? false, :content-type "application/json", :character-encoding "utf8", :uri "/api/Resource.Core/InvokeAgent", :server-name "localhost", :query-string nil, :scheme :http, :request-method :post}
+21:11:27.382 INFO  agentlang.lang - registering model Agentlang, 0.6.1
+21:11:27.415 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :meta for [:override :Agentlang.Kernel.Lang/LoadModelFromMeta]
+21:11:27.415 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :timer for [:compose [:Agentlang.Kernel.Lang :Timer]]
+21:11:27.415 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :data-sync for [:override :Agentlang.Kernel.Lang/DataSync]
+21:11:27.597 DEBUG c.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+21:11:27.675 DEBUG c.a.internal.config.InternalConfig - Configuration override awssdk_config_override.json not found.
+21:11:28.048 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+21:11:28.566 DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+21:11:28.987 DEBUG agentlang.util - AGENT_CONFIG = nil
+21:11:28.988 INFO  agentlang.lang.tools.build - loading model 
+21:11:28.989 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:11:28.994 INFO  agentlang.lang.tools.loader - Component root path: .
+21:11:28.994 INFO  agentlang.lang.tools.loader - File name: resource/core.al
+21:11:29.037 INFO  agentlang.util.runtime - Components - :Agentlang.Kernel.UserApp :Agentlang.Kernel.Lang :Agentlang.Kernel.Identity :Agentlang.Kernel.Rbac :Agentlang.Core :Resource.Core
+21:11:29.054 DEBUG c.clickhouse.jdbc.ClickHouseDriver - ClickHouse Driver 0.6.0.0(JDBC: 4.2.0.0) registered
+21:11:29.178 INFO  agentlang.resolver.core - Calling method :on-set-path in resolver :inference for [:compose [:Agentlang.Core :Document]]
+21:11:29.212 INFO  agentlang.core - Server config - {:port 8080, :authentication nil}
+21:11:29.275 INFO  agentlang.http - GraphQL schema generation and resolver injection succeeded.
+21:11:30.021 INFO  agentlang.lang - registering model Resource, 0.0.1
+21:11:38.180 INFO  agentlang.http - Processing HTTP request - {:remote-addr "0:0:0:0:0:0:0:1", :start-time 205663272365958, :params {:* "Resource.Core/InvokeAgent"}, :route-params {:* "Resource.Core/InvokeAgent"}, :headers {"accept" "*/*", "content-length" "705", "content-type" "application/json", "host" "localhost:8080", "user-agent" "curl/8.7.1"}, :server-port 8080, :content-length 705, :compojure/route [:post "/api/*"], :websocket? false, :content-type "application/json", :character-encoding "utf8", :uri "/api/Resource.Core/InvokeAgent", :server-name "localhost", :query-string nil, :scheme :http, :request-method :post}

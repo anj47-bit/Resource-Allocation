@@ -1,6 +1,6 @@
 (component :Company)
 
-(entity :Employee
+(entity :Company/Employee
  {:Email {:type :Email :guid true}
   :FirstName :String
   :LastName :String
@@ -38,7 +38,7 @@
 
 ;; Function to extract JSON key-value pairs using regex
 (defn extract-json-value [json-string key]
-  (let [pattern (re-pattern (str "\"" key "\"\\s*:\\s*\"?([^\"]+)\"?"))]
+  (let [pattern (re-pattern (str "\"" key "\"\\s*:\\s*\"?([^\",]+)\"?"))]
     (second (re-find pattern json-string))))
 
 ;; Function to fetch and parse all employee fields
@@ -67,5 +67,11 @@
 
 (resolver :Company/EmployeeResolver
  {:with-methods
-   {:query query-employee}
+   {:query (fn [[entity-name query]]
+             (let [[opr attr value] (:where query)]
+               (when (and (= opr :=) (= attr :Email))
+                    (println (str "looking up " value))
+                    (println (get-employee-by-email value))
+                 (when-let [employee (get-employee-by-email value)]
+                    [employee]))))}
   :paths [:Company/Employee]})

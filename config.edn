@@ -1,12 +1,7 @@
-{:service {:port :8080}}
-;; :store {:type :h2 :dbname "./agentlang.db.1739968278471.mvdb"}
-;; {:store
-;;  {:type :postgres
-;;   :host "localhost"
-;;   :port 5432
-;;   :dbname "agentlang"
-;;   :user "aj-47"
-;;   :password "anuraj314159"}}
-{:deps {clj-http/clj-http {:mvn/version "3.12.3"}
-        cheshire/cheshire {:mvn/version "5.11.0"}}}
-
+{:service {:port 8080}
+:store
+ {:type :postgres
+    :host "localhost"
+    :username "aj-47"
+    :password "anuraj314159"
+    :dbname "test"}}
