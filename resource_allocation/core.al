@@ -1,4 +1,5 @@
-(component :ResourceAllocation.Core)
+(component :ResourceAllocation.Core
+{:clj-import [(:use [agentlang.inference.service.channel.cmdline])]})
 
 ;; =====================
 ;; Entity Definitions
@@ -38,7 +39,7 @@
          :meta {:audit :true}})
 
 (entity :Allocation
-        {:GlobalId {:type :UUID :default agentlang.util/uuid-string}
+        {:GlobalId {:type :UUID :id true :default agentlang.util/uuid-string}
          :Id {:type :UUID :id true :default agentlang.util/uuid-string}
          :Resource :UUID ; Link to Resource.Id
          :Project :UUID ; Link to Project.Id
@@ -61,15 +62,17 @@
           {:roles ["user"] :allow [:read]}]
    :meta {:audit true}})
 
+
+
 ;; =====================
 ;; Relationships
 ;; =====================
 
-(relationship :ResourceAllocations
-              {:meta {:between [:ResourceAllocation.Core/Resource :ResourceAllocation.Core/Allocation]}})
+;; (relationship :ResourceAllocations
+;;               {:meta {:between [:ResourceAllocation.Core/Resource :ResourceAllocation.Core/Allocation]}})
 
-(relationship :ProjectAllocations
-              {:meta {:between [:ResourceAllocation.Core/Project :ResourceAllocation.Core/Allocation]}})
+;; (relationship :ProjectAllocations
+;;               {:meta {:between [:ResourceAllocation.Core/Project :ResourceAllocation.Core/Allocation]}})
 
 
 (event :CreateResource
@@ -155,8 +158,9 @@
               :Notes :AllocateResource.Notes}}
 
     ;; Step 4: Create Relationships
-            {:-> [[{:ResourceAllocation.Core/ResourceAllocations {}} :Resource]
-                  [{:ResourceAllocation.Core/ProjectAllocations {}} :Project]]}]
+        ;;     {:-> [[{:ResourceAllocation.Core/ResourceAllocations {}} :Resource]
+        ;;           [{:ResourceAllocation.Core/ProjectAllocations {}} :Project]]}
+                ]
 
    ;; Step 5: If Resource Not Found
            :not-found
@@ -167,17 +171,17 @@
 ;; Agent Definition
 ;; =====================
 
+(def agent-msg "I'm an intelligent agent who will help you manage the family database.")
+
 {:Agentlang.Core/Agent
  {:Name :resource-agent
-  :Type :planner
   :Tools [:ResourceAllocation.Core/Resource
           :ResourceAllocation.Core/Project
-          :ResourceAllocation.Core/Allocation
-          :ResourceAllocation.Core/CreateResource
-          :ResourceAllocation.Core/CreateProject
-          :ResourceAllocation.Core/AllocateResource]
-  :UserInstruction "You are a resource management agent responsible for handling resources, projects, and allocations.
-  - To create an resource, use CreateResource.
-  - To create a project, use CreateProject.
-  - To allocate an resource to a project, use AllocateResource."
+          :ResourceAllocation.Core/Allocation]
+  :Channels [{:channel-type :default
+              :name :ResourceAllocation.Core/HttpChannel}
+             {:channel-type :cmdline
+              :name :ResourceAllocation.Core/ReplChannel
+              :doc agent-msg}]
+  :UserInstruction "You are a resource management agent responsible for handling resources, projects, and allocations."
   :Input :ResourceAllocation.Core/InvokeAgent}}
