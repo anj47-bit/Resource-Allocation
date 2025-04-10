@@ -5,6 +5,8 @@
 ;; Entity Definitions
 ;; =====================
 
+{:Agentlang.Core/LLM {:Name :llm01}}
+
 (entity :Resource
         {:Id :Identity
          :FirstName :String
@@ -171,17 +173,21 @@
 ;; Agent Definition
 ;; =====================
 
-(def agent-msg "I'm an intelligent agent who will help you manage the family database.")
-
 {:Agentlang.Core/Agent
- {:Name :resource-agent
-  :Tools [:ResourceAllocation.Core/Resource
-          :ResourceAllocation.Core/Project
-          :ResourceAllocation.Core/Allocation]
+ {:Name :Resource.Core/Agent
+  :LLM :llm01
   :Channels [{:channel-type :default
               :name :ResourceAllocation.Core/HttpChannel}
              {:channel-type :cmdline
               :name :ResourceAllocation.Core/ReplChannel
-              :doc agent-msg}]
-  :UserInstruction "You are a resource management agent responsible for handling resources, projects, and allocations."
-  :Input :ResourceAllocation.Core/InvokeAgent}}
+              :doc "I'm an intelligent agent who will help you manage the resources database."}]
+  :Tools [:ResourceAllocation.Core/Resource
+          :ResourceAllocation.Core/Project
+          :ResourceAllocation.Core/Allocation]
+  :UserInstruction (str "Based on user input, either\n"
+                        "1. create a resource, project or allocation.\n"
+                        "2. query a resource, project or allocation.\n"
+                        "3. delete a resource, project or allocation.\n"
+                        "4. update a resource, project or allocation.\n5")}}
+
+;; Sample request: create a new resource, first name: muazzam, last name: ali, preferred name: muazzam, email: muazzam@gmail.com, role: software engineer, team: software, status: Active, Work Location: US
