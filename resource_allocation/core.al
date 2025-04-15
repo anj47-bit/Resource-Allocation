@@ -8,7 +8,7 @@
 {:Agentlang.Core/LLM {:Name :llm01}}
 
 (entity :Resource
-        {:Id :Identity
+        {:Id {:type :Identity :default agentlang.util/uuid-string}
          :FirstName :String
          :LastName :String
          :PreferredName :String
@@ -22,16 +22,15 @@
          :meta {:audit :true}})
 
 (entity :Project
-        {:Id :Identity
+        {:Id {:type :Identity :default agentlang.util/uuid-string}
          :Name {:type :String :unique true}
          :Owner :String
-         :Manager :String
-         :Description :String
+         :Description {:type :String :optional true}
          :Status {:oneof ["Active" "Completed" "Paused" "Proposed" "Terminated"]
                   :default "Active"}
          :Type {:oneof ["Key Initiative" "RTB" "Ongoing"]}
          :Location {:type :String :optional true}
-         :StartDate :Date
+         :StartDate{:type :Date :optional true}
          :EndDate {:type :Date :optional true}
          :Cost {:type :Int :optional true}
          :CostCurrency {:type :String :default "USD"}
@@ -77,96 +76,96 @@
 ;;               {:meta {:between [:ResourceAllocation.Core/Project :ResourceAllocation.Core/Allocation]}})
 
 
-(event :CreateResource
-       {:FirstName :String
-        :LastName :String
-        :PreferredName :String
-        :Email :Email
-        :Role :String
-        :Team :String
-        :Status {:oneof ["Active" "Inactive"]}
-        :WorkLocation :String})
+;; (event :CreateResource
+;;        {:FirstName :String
+;;         :LastName :String
+;;         :PreferredName :String
+;;         :Email :Email
+;;         :Role :String
+;;         :Team :String
+;;         :Status {:oneof ["Active" "Inactive"]}
+;;         :WorkLocation :String})
 
-(dataflow :CreateResource
-          {:ResourceAllocation.Core/Resource
-           {:FirstName :CreateResource.FirstName
-            :LastName :CreateResource.LastName
-            :PreferredName :CreateResource.PreferredName
-            :Email :CreateResource.Email
-            :Role :CreateResource.Role
-            :Team :CreateResource.Team
-            :Status :CreateResource.Status
-            :WorkLocation :CreateResource.WorkLocation}})
+;; (dataflow :CreateResource
+;;           {:ResourceAllocation.Core/Resource
+;;            {:FirstName :CreateResource.FirstName
+;;             :LastName :CreateResource.LastName
+;;             :PreferredName :CreateResource.PreferredName
+;;             :Email :CreateResource.Email
+;;             :Role :CreateResource.Role
+;;             :Team :CreateResource.Team
+;;             :Status :CreateResource.Status
+;;             :WorkLocation :CreateResource.WorkLocation}})
 
-(event :CreateProject
-       {:Name :String
-        :Owner :String
-        :Manager :String
-        :Description :String
-        :Status {:oneof ["Active" "Completed" "Paused" "Proposed" "Terminated"]}
-        :Type {:oneof ["Key Initiative" "RTB" "Ongoing"]}
-        :Location {:type :String :optional true}
-        :StartDate :Date
-        :EndDate {:type :Date :optional true}
-        :Cost {:type :Int :optional true}
-        :CostCurrency {:type :String :default "USD"}
-        :AllowOvertime {:type :Boolean :default true}})
+;; (event :CreateProject
+;;        {:Name :String
+;;         :Owner :String
+;;         ;; :Manager :String
+;;         :Description :String
+;;         :Status {:oneof ["Active" "Completed" "Paused" "Proposed" "Terminated"]}
+;;         :Type {:oneof ["Key Initiative" "RTB" "Ongoing"]}
+;;         :Location {:type :String :optional true}
+;;         :StartDate :Date
+;;         :EndDate {:type :Date :optional true}
+;;         :Cost {:type :Int :optional true}
+;;         :CostCurrency {:type :String :default "USD"}
+;;         :AllowOvertime {:type :Boolean :default true}})
 
-(dataflow :CreateProject
-          {:ResourceAllocation.Core/Project
-           {:Name :CreateProject.Name
-            :Owner :CreateProject.Owner
-            :Manager :CreateProject.Manager
-            :Description :CreateProject.Description
-            :Status :CreateProject.Status
-            :Type :CreateProject.Type
-            :Location :CreateProject.Location
-            :StartDate :CreateProject.StartDate
-            :EndDate :CreateProject.EndDate
-            :Cost :CreateProject.Cost
-            :CostCurrency :CreateProject.CostCurrency
-            :AllowOvertime :CreateProject.AllowOvertime}})
+;; (dataflow :CreateProject
+;;           {:ResourceAllocation.Core/Project
+;;            {:Name :CreateProject.Name
+;;             :Owner :CreateProject.Owner
+;;             :Manager :CreateProject.Manager
+;;             :Description :CreateProject.Description
+;;             :Status :CreateProject.Status
+;;             :Type :CreateProject.Type
+;;             :Location :CreateProject.Location
+;;             :StartDate :CreateProject.StartDate
+;;             :EndDate :CreateProject.EndDate
+;;             :Cost :CreateProject.Cost
+;;             :CostCurrency :CreateProject.CostCurrency
+;;             :AllowOvertime :CreateProject.AllowOvertime}})
 
-(event :AllocateResource
-       {:ResourceEmail :Email
-        :ProjectName :String
-        :Period :String
-        :Duration {:oneof ["day" "week" "month" "year"]}
-        :AllocationEntered :Double
-        :Notes {:type :String :optional true}})
+;; (event :AllocateResource
+;;        {:ResourceEmail :Email
+;;         :ProjectName :String
+;;         :Period :String
+;;         :Duration {:oneof ["day" "week" "month" "year"]}
+;;         :AllocationEntered :Double
+;;         :Notes {:type :String :optional true}})
 
-(dataflow :AllocateResource
-          [:try
+;; (dataflow :AllocateResource
+;;           [:try
 
-   ;; Step 1: Find Resource by Email
-           {:ResourceAllocation.Core/Resource
-            {:Email? :AllocateResource.ResourceEmail}
-            :as [:Resource]}
+;;    ;; Step 1: Find Resource by Email
+;;            {:ResourceAllocation.Core/Resource
+;;             {:Email? :AllocateResource.ResourceEmail}
+;;             :as [:Resource]}
 
-   ;; Step 2: If Resource found,
-           :ok
-           [{:ResourceAllocation.Core/Project
-             {:Name? :AllocateResource.ProjectName}
-             :as [:Project]}
+;;    ;; Step 2: If Resource found,
+;;            :ok
+;;            [{:ResourceAllocation.Core/Project
+;;              {:Name? :AllocateResource.ProjectName}
+;;              :as [:Project]}
 
-    ;; Step 3: If Project found, create the Allocation
-            {:ResourceAllocation.Core/Allocation
-             {:Resource :Resource.Id
-              :Project :Project.Id
-              :ProjectName :Project.Name
-              :Period :AllocateResource.Period
-              :Duration :AllocateResource.Duration
-              :AllocationEntered :AllocateResource.AllocationEntered
-              :Notes :AllocateResource.Notes}}
+;;     ;; Step 3: If Project found, create the Allocation
+;;             {:ResourceAllocation.Core/Allocation
+;;              {:Resource :Resource.Id
+;;               :Project :Project.Id
+;;               :ProjectName :Project.Name
+;;               :Period :AllocateResource.Period
+;;               :Duration :AllocateResource.Duration
+;;               :AllocationEntered :AllocateResource.AllocationEntered
+;;               :Notes :AllocateResource.Notes}}
 
-    ;; Step 4: Create Relationships
-        ;;     {:-> [[{:ResourceAllocation.Core/ResourceAllocations {}} :Resource]
-        ;;           [{:ResourceAllocation.Core/ProjectAllocations {}} :Project]]}
-                ]
+;;     ;; Step 4: Create Relationships
+;;         ;;     {:-> [[{:ResourceAllocation.Core/ResourceAllocations {}} :Resource]
+;;         ;;           [{:ResourceAllocation.Core/ProjectAllocations {}} :Project]]}
+;;                 ]
 
-   ;; Step 5: If Resource Not Found
-           :not-found
-           [{:error "Resource not found with the provided email."}]])
+;;    ;; Step 5: If Resource Not Found
+;;            :not-found
+;;            [{:error "Resource not found with the provided email."}]])
 
 
 ;; =====================
@@ -185,9 +184,17 @@
           :ResourceAllocation.Core/Project
           :ResourceAllocation.Core/Allocation]
   :UserInstruction (str "Based on user input, either\n"
-                        "1. create a resource, project or allocation.\n"
-                        "2. query a resource, project or allocation.\n"
-                        "3. delete a resource, project or allocation.\n"
-                        "4. update a resource, project or allocation.\n5")}}
+                        "Only perform the actions which \n"
+                        "1. create a resource, project or allocation. Before creating a resource ask confirmation from the user.
+                             - If a date is given for creating a resource. Ex: 21st Feb, 2024 -> 2024-02-21
+                             - If the first letter of the first name and last name is in lower case convert the first letter to upper case.
+                                Ex: muazzam -> Muazzam.
+                                Also whichever attribute is default don't ask to provide a value for it.
+                             \n"
+                        "2. If a user asks to list all resources. List them without any criteria."
+                        "3. query a resource, project or allocation.\n"
+                        "4. delete a resource, project or allocation.\n"
+                        "5. update a resource, project or allocation.\n")}}
 
 ;; Sample request: create a new resource, first name: muazzam, last name: ali, preferred name: muazzam, email: muazzam@gmail.com, role: software engineer, team: software, status: Active, Work Location: US
+;; create a project with name: beta with owner: daniel status: Active, start date: 4th April, 2024, Terminated type: RTB Costcurrency: USD, description: project for now
