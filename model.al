@@ -1,5 +1,6 @@
 {:name :ResourceAllocation
  :components [:ResourceAllocation.Schema
+              :ResourceAllocation.Slack
               :ResourceAllocation.Core]
  :version "0.0.1"
  :dependencies []
