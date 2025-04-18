@@ -1,5 +1,6 @@
 (component :ResourceAllocation.Core 
-           {:refer [:ResourceAllocation.Schema]
+           {:refer [:ResourceAllocation.Schema
+                    :ResourceAllocation.Slack]
             :clj-import [(:use [agentlang.inference.service.channel.cmdline])]})
 
 
@@ -9,6 +10,8 @@
 ;; Agent Definition
 ;; =====================
 
+(def agent-msg "I'm an intelligent agent who will help you manage the resources database.")
+
 {:Agentlang.Core/Agent
  {:Name :Resource.Core/Agent
   :LLM :llm01
@@ -16,7 +19,11 @@
               :name :ResourceAllocation.Core/HttpChannel}
              {:channel-type :cmdline
               :name :ResourceAllocation.Core/ReplChannel
-              :doc "I'm an intelligent agent who will help you manage the resources database."}]
+              :doc agent-msg}
+              {:channel-type :slack
+              :name :Family.Core/SlackChannel
+              :doc agent-msg}
+             ]
   :Tools [:ResourceAllocation.Schema/Resource
           :ResourceAllocation.Schema/Project
           :ResourceAllocation.Schema/Allocation]
