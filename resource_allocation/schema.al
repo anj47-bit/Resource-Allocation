@@ -4,7 +4,9 @@
 ;; Entity Definitions
 ;; =====================
 
-           
+;; (entity :ResourceCount
+;;         {:Count :Int})
+
 (entity :Resource
         {:Id {:type :Identity :default agentlang.util/uuid-string}
          :FirstName :String
